@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Регистрация — Musicaa</title>
+</head>
+<body>
+  <!-- Хедер -->
+  <header class="header">
+    <nav class="navigation">
+      <a href="../index.html"><img class="img-nav" src="../images/logo.jpg" alt="Logo" width="70" height="50"></a>
+      <ul class="catalog-items">
+        <a href="../index.html"><li class="catalog-item">Главная</li></a>
+        <a href="catalog.html"><li class="catalog-item">Каталог</li></a>
+        <a href="product.html"><li class="catalog-item">Товары</li></a>
+        <a href="order.html"><li class="catalog-item">Оформить заказ</li></a>
+      </ul>
+      <div class="auth-buttons">
+        <a href="login.html" class="btn-login">Войти</a>
+        <a href="registration.html" class="btn-signup">Регистрация</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Форма регистрации -->
+  <main class="form-page">
+    <h2>Регистрация в <span>Musicaa</span></h2>
+    
+    <form class="shop-form" action="#" method="post">
+      
+      <div class="form-row">
+        <label for="name">Имя</label>
+        <input id="name" name="name" type="text" placeholder="Введите имя" required>
+      </div>
+
+      <div class="form-row">
+        <label for="surname">Фамилия</label>
+        <input id="surname" name="surname" type="text" placeholder="Введите фамилию" required>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Электронная почта</label>
+        <input id="email" name="email" type="email" placeholder="example@mail.ru" required>
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Телефон</label>
+        <input id="phone" name="phone" type="tel" placeholder="+7 (999) 000-00-00" required>
+      </div>
+
+      <div class="form-row">
+        <label for="password">Пароль</label>
+        <input id="password" name="password" type="password" minlength="6" placeholder="Минимум 6 символов" required>
+      </div>
+
+      <div class="form-row">
+        <label for="password-confirm">Повторите пароль</label>
+        <input id="password-confirm" name="password-confirm" type="password" minlength="6" required>
+      </div>
+
+      <label class="checkbox-row">
+        <input type="checkbox" name="agreement" required>
+        <span>Я согласен с правилами магазина и обработкой персональных данных</span>
+      </label>
+
+      <button class="btn-submit" type="submit">Зарегистрироваться</button>
+      
+      <p class="form-link">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+    </form>
+  </main>
+</body>
+</html>

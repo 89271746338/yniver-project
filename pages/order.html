@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Оформление заказа — Musicaa</title>
+</head>
+<body>
+  <!-- Хедер -->
+  <header class="header">
+    <nav class="navigation">
+      <a href="../index.html"><img class="img-nav" src="../images/logo.jpg" alt="Logo" width="70" height="50"></a>
+      <ul class="catalog-items">
+        <a href="../index.html"><li class="catalog-item">Главная</li></a>
+        <a href="catalog.html"><li class="catalog-item">Каталог</li></a>
+        <a href="product.html"><li class="catalog-item">Товары</li></a>
+        <a href="order.html"><li class="catalog-item">Оформить заказ</li></a>
+      </ul>
+      <div class="auth-buttons">
+        <a href="login.html" class="btn-login">Войти</a>
+        <a href="registration.html" class="btn-signup">Регистрация</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Форма заказа -->
+  <main class="form-page">
+    <h2>Оформление заказа</h2>
+    
+    <form class="shop-form" action="#" method="post">
+      
+      <!-- ГРУППА 1: КОНТАКТЫ -->
+      <fieldset>
+        <legend>Контактные данные</legend>
+        <div class="form-row">
+          <label for="order-name">Имя</label>
+          <input id="order-name" name="name" type="text" placeholder="Иван" required>
+        </div>
+        <div class="form-row">
+          <label for="order-surname">Фамилия</label>
+          <input id="order-surname" name="surname" type="text" placeholder="Иванов" required>
+        </div>
+        <div class="form-row">
+          <label for="order-email">Email</label>
+          <input id="order-email" name="email" type="email" placeholder="example@mail.ru" required>
+        </div>
+        <div class="form-row">
+          <label for="order-phone">Телефон</label>
+          <input id="order-phone" name="phone" type="tel" placeholder="+7 (999) 000-00-00" required>
+        </div>
+      </fieldset>
+
+      <!-- ГРУППА 2: ДОСТАВКА -->
+      <fieldset>
+        <legend>Доставка</legend>
+        <div class="form-row">
+          <label for="city">Город</label>
+          <input id="city" name="city" type="text" placeholder="Москва" required>
+        </div>
+        <div class="form-row">
+          <label for="address">Адрес (улица, дом, квартира)</label>
+          <input id="address" name="address" type="text" placeholder="ул. Пушкина, д. 1" required>
+        </div>
+        <div class="form-row">
+          <label for="delivery">Способ доставки</label>
+          <select id="delivery" name="delivery" required>
+            <option value="">Выберите вариант</option>
+            <option value="pickup">Пункт выдачи</option>
+            <option value="courier">Курьер</option>
+            <option value="post">Почта России</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- ГРУППА 3: ОПЛАТА -->
+      <fieldset>
+        <legend>Способ оплаты</legend>
+        
+        <label class="radio-row">
+          <input type="radio" name="payment" value="card" required>
+          <span>Банковская карта</span>
+        </label>
+        <label class="radio-row">
+          <input type="radio" name="payment" value="sbp">
+          <span>СБП (Система быстрых платежей)</span>
+        </label>
+        <label class="radio-row">
+          <input type="radio" name="payment" value="cash">
+          <span>При получении</span>
+        </label>
+      </fieldset>
+
+      <!-- ГРУППА 4: ТОВАР -->
+      <fieldset>
+        <legend>Информация о заказе</legend>
+        
+        <div class="form-row">
+          <label for="product">Выберите инструмент</label>
+          <select id="product" name="product" required>
+            <option value="">Выберите товар</option>
+            <option value="violin">Скрипка</option>
+            <option value="guitar">Гитара</option>
+            <option value="synthesizer">Синтезатор</option>
+            <option value="cello">Виолончель</option>
+            <option value="accessories">Аксессуары (чехлы, струны)</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="quantity">Количество</label>
+          <input id="quantity" name="quantity" type="number" min="1" max="10" value="1" required>
+        </div>
+
+        <div class="form-row">
+          <label for="comment">Комментарий к заказу</label>
+          <textarea id="comment" name="comment" rows="4" placeholder="Например: Позвонить за час до доставки"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- ПОДТВЕРЖДЕНИЕ -->
+      <label class="checkbox-row">
+        <input type="checkbox" name="agreement" required>
+        <span>Я подтверждаю правильность введённых данных и согласен с условиями заказа</span>
+      </label>
+
+      <button class="btn-submit" type="submit">Оформить заказ</button>
+    </form>
+  </main>
+</body>
+</html>

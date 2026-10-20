@@ -1,0 +1,655 @@
+:root {
+  --black:#0b0b0b;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", serif;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+.header {
+  width: 100%;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.catalog-items {
+  display: flex;
+  gap: 50px;
+}
+
+a{
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.catalog-item {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: normal;
+  transition: color 0.3s ease;
+}
+
+.catalog-item:hover {
+  color: red;
+}
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.btn-signup {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;  
+}
+.btn-signup:hover {
+  background-color: rgb(225, 5, 5);
+}
+.btn-login {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.btn-login:hover{
+  color:rgb(176, 173, 173);
+}
+.hero-section {
+  background-color: #000; /* Черный фон для всего баннера */
+  width: 100%;
+  padding: 80px 20px; /* Отступы сверху и снизу */
+}
+
+.hero-container {
+  max-width: 1200px; /* Ограничиваем ширину контента */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Текст слева */
+.main-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.main-content h1 {
+  font-size: 64px;
+  font-weight: 400;
+  color: white;
+  line-height: 1.1;
+}
+
+.main-content p {
+  color: rgba(255, 255, 255, 0.61);
+  font-size: 16px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.main-title span, .main-subtitle span {
+  color: red;
+}
+
+.btn-catalog {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  margin-top: 30px;
+  transition: background-color 0.3s;
+}
+
+.btn-catalog:hover {
+  background-color: rgb(225, 5, 5);
+}
+
+/* Скрипка справа */
+.main-image-wrapper {
+  flex-shrink: 0;
+}
+
+.img-main {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* --- СЕКЦИЯ 2: Светлый блок с категориями --- */
+.categories-section {
+  background-color: black; /* Светло-голубой/серый фон как на фото 2 */
+  width: 100%;
+  padding: 60px 20px;
+}
+
+.categories-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Заголовок "Категории товаров" */
+.categories-container h2 {
+  font-size: 32px;
+  color: white; /* Темно-синий цвет */
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+/* Сетка карточек */
+.cards-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+/* Сама карточка */
+.card {
+  background-color: black; /* Белый фон карточки */
+  padding: 30px;
+  border: 1px solid red;
+  border-radius: 12px; /* Скругленные углы */
+  flex: 1; /* Все карточки одинаковой ширины */
+  box-shadow: 0 4px 15px rgba(250, 0, 0, 0.468); /* Легкая тень для объема */
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 15px rgba(250, 0, 0, 0.635);; 
+
+}
+
+.card h3 {
+  color: white; /* Темный текст */
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.card p {
+  color: rgba(255, 255, 255, 0.61); /* Серый текст */
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Ссылка "Смотреть товары" */
+.card-link {
+  color: white;
+  font-size: 15px;
+  text-decoration: underline;
+  margin-top: auto; /* Прижимает ссылку к низу карточки */
+}
+
+.card-link:hover {
+  color: red; /* Красный при наведении в стиле сайта */
+}
+
+.footer {
+  background-color: var(--black);
+  width: 100%;
+  padding: 40px 20px; 
+  margin-top: auto; 
+}
+
+.footer-container {
+  max-width: 1200px; 
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-end; 
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+
+.footer-info p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.footer-copy {
+  font-weight: 600; 
+  margin-top: 10px; 
+}
+
+.footer-desc {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+.footer-copy span {
+  color: red;
+}
+
+.catalog-page {
+  max-width: 1200px;
+  margin: 120px auto 60px;
+  padding: 0 20px;
+}
+
+.page-title {
+  color: white;
+  font-size: 42px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.page-title span {
+  color: red;
+}
+
+/* Сетка карточек (использует Grid из вашей ЛР2) */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Карточка в каталоге */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Чтобы ссылка растягивалась на всю карточку */
+}
+
+.catalog-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.catalog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.15); /* Красноватая тень */
+  border-color: red;
+}
+
+.catalog-img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain; 
+  background-color: black; 
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.catalog-card h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: red;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: auto; /* Прижимает цену и кнопку к низу */
+}
+
+.catalog-card .btn-catalog {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid red;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.catalog-card:hover .btn-catalog {
+  background-color: red;
+}
+
+.product-page {
+  max-width: 1200px;
+  margin: 120px auto 60px;
+  padding: 0 20px;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Контейнер для картинки */
+.product-image {
+  flex: 0 1 500px; /* Ограничиваем ширину картинки максимум 500px */
+  background-color: transparent; /* Убираем белый фон вокруг картинки */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Сама картинка */
+.product-image img {
+  width: 100%;
+  max-height: 600px; /* Ограничиваем высоту, чтобы не было гигантским */
+  object-fit: contain; /* Картинка вписывается целиком */
+  border-radius: 12px;
+}
+
+/* Текстовая часть справа */
+.product-info {
+  flex: 1; /* Занимает оставшееся место */
+  color: white;
+  padding-top: 20px;
+}
+
+.product-info h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.product-price {
+  color: red;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.product-desc {
+  color: #b0b0b0;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.product-info h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.product-specs {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.product-specs li {
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
+  color: #e0e0e0;
+  font-size: 15px;
+}
+
+/* --- КНОПКИ (Оформление заказа и Корзина) --- */
+.product-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Общие стили для обеих кнопок */
+.btn-order, 
+.btn-cart {
+  flex: 1; /* Кнопки будут одинаковой ширины */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px; /* Фиксированная высота, чтобы они были ровными */
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+/* Кнопка "Оформить заказ" (красная заливка) */
+.btn-order {
+  background-color: red;
+  color: white;
+  border: 2px solid red;
+}
+
+.btn-order:hover {
+  background-color: rgb(225, 5, 5);
+  border-color: rgb(225, 5, 5);
+  transform: translateY(-2px);
+}
+
+/* Кнопка "Добавить в корзину" (прозрачная с красной рамкой) */
+.btn-cart {
+  background-color: transparent;
+  color: white;
+  border: 2px solid red;
+}
+
+.btn-cart:hover {
+  background-color: red;
+  transform: translateY(-2px);
+}
+
+/* Адаптивность для страницы товара */
+@media (max-width: 768px) {
+  .product-page {
+    flex-direction: column; 
+  }
+  
+  .product-image {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .product-actions {
+    flex-direction: column; /* На телефонах кнопки встанут друг под другом */
+  }
+
+  .btn-order, 
+  .btn-cart {
+    width: 100%;
+  }
+}
+
+.form-page {
+  max-width: 760px;
+  margin: 120px auto 60px; /* Отступ сверху, чтобы не перекрывал хедер */
+  padding: 0 20px;
+}
+
+.form-page h2 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-page h2 span {
+  color: red;
+}
+
+/* Сама форма */
+.shop-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px;
+  background-color: #111111; /* Темно-серый фон карточки */
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Группировка полей (label + input) */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-row label {
+  font-weight: 500;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+/* Поля ввода */
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font: inherit;
+  color: white;
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Плейсхолдеры */
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  color: #666;
+}
+
+/* Состояние фокуса (обязательно по заданию) */
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: red;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.2);
+}
+
+/* Валидация (обязательно по заданию) */
+/* Если поле обязательно, но пустое или неверное - красная рамка */
+.shop-form input:invalid:not(:placeholder-shown),
+.shop-form select:invalid {
+  border-color: #dc2626;
+}
+/* Если поле заполнено верно - зеленая рамка */
+.shop-form input:valid,
+.shop-form select:valid {
+  border-color: #16a34a;
+}
+
+/* Группировка (fieldset и legend) */
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #161616;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: 700;
+  color: red;
+  font-size: 18px;
+}
+
+/* Чекбоксы и Радио-кнопки */
+.checkbox-row,
+.radio-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+.checkbox-row input,
+.radio-row input {
+  width: auto;
+  margin-top: 4px;
+  accent-color: red; /* Красит галочку в красный */
+  cursor: pointer;
+}
+
+/* Кнопка отправки формы */
+.btn-submit {
+  background-color: red;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: rgb(225, 5, 5);
+  transform: translateY(-2px);
+}
+
+/* Ссылки под формой */
+.form-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #888;
+  font-size: 14px;
+}
+
+.form-link a {
+  color: red;
+  transition: color 0.3s;
+}
+
+.form-link a:hover {
+  color: rgb(225, 5, 5);
+  text-decoration: underline;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 600px) {
+  .shop-form {
+    padding: 20px;
+  }
+  .form-page h2 {
+    font-size: 28px;
+  }
+  fieldset {
+    padding: 16px;
+  }
+}
